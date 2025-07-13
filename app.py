@@ -98,17 +98,17 @@ def get_period_archangel(birth_date):
     # Sort special dates by month and day
     sorted_special = sorted(special_dates, key=lambda x: (x[0], x[1]))
     for i, (m, d, arch_num) in enumerate(sorted_special):
-        special_date = datetime(birth_date.year, m, d)
+        special_date = datetime(birth_date.year, m, d).date()
         if birth_date > special_date:
             # Check if before next special date
             next_i = (i + 1) % len(sorted_special)
             next_m, next_d, _ = sorted_special[next_i]
-            next_date = datetime(birth_date.year if next_m >= m else birth_date.year + 1, next_m, next_d)
+            next_date = datetime(birth_date.year if next_m >= m else birth_date.year + 1, next_m, next_d).date()
             if birth_date < next_date:
                 return angels[arch_num - 1]
     # If after last, before first next year
     first_m, first_d, first_arch = sorted_special[0]
-    first_date = datetime(birth_date.year + 1, first_m, first_d)
+    first_date = datetime(birth_date.year + 1, first_m, first_d).date()
     if birth_date < first_date:
         last_arch = sorted_special[-1][2]
         return angels[last_arch - 1]
