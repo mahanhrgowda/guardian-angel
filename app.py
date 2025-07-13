@@ -79,10 +79,18 @@ angels = [
     {"number": 72, "name": "Mumiah", "zodiac": "Pisces", "element": "Water", "attributes": "🔄⚡ Mumiah helps complete tasks, gives energy for new beginnings, revitalizes by bringing success to experiments and aiding medicine. This angel influences chemistry. Invoked for completion. Associated with disclosure. Invocation: Completion rituals. Ideal for finishers. Brings completion and success in endeavors. Brings undertakings to successful conclusion. Longevity and success in medicine.", "psalm": "116:7", "sigil_desc": "Features a six-pointed star with the divine name Mumi repeated three times—twice anti-clockwise around the outside of the star and once in the center, written from right to left. Also a pentagram with the Angel's name Mumiah formed by a single anti-clockwise ring of letters, including the suffix iah added to the Name of God. Includes a central pentagon space for desires, surrounded by patterns of light and dark texture for Empowered Angel Magick."}
 ]
 
-# Special days and elements as per user
+# Special days, elements, transitions, archangels, and symbolism
 special_days = [(1, 5), (3, 19), (5, 31), (8, 12), (10, 24)]  # Jan 5, Mar 19, May 31, Aug 12, Oct 24
-elements = ["Earth", "Fire", "Water", "Ether", "Air"]  # spring-earth, summer-fire, monsoon-water, autumn-sky/ether, winter-air
+elements = ["Earth", "Fire", "Water", "Aether (Wood)", "Air (Metal)"]  
 transitions = ["spring", "summer", "monsoon", "autumn", "winter"]
+archangels = ["Uriel", "Michael", "Gabriel", "Nathaniel", "Raphael"]
+symbolisms = [
+    "Promotes balance, peace, and guidance from doubt. Tied to the stomach and spleen meridians; radiates light to show life's path and encourage serenity. Imbalance may cause anxiety.",
+    "Inspires divine love, heart-opening, and overcoming depression. Tied to the heart and small intestine meridians; promotes spreading light and recognizing soul duality. Imbalance may cause depression.",
+    "Encourages intuition, flexibility, and freedom from fears. Tied to the bladder and kidney meridians; brings fertility, wisdom, and spiritual information. Imbalance may result in fear control.",
+    "Represents new beginnings, growth, and higher vibrations. Tied to the gall-bladder and liver meridians; aids in expanding consciousness and understanding limitless potential. Imbalance may cause complaining.",
+    "Focuses on healing, wisdom, and interconnectedness. Tied to the lung and large intestine meridians; assists in studies, music, medicine, and repairing disharmony. Imbalance may lead to downfall."
+]
 
 def get_zodiac_sign(lon):
     lon = lon % 360
@@ -109,7 +117,7 @@ st.title("Guardian Angel Calculator")
 
 st.markdown("""
 ### How it works
-This app determines your guardian angel based on your birth date using Kabbalistic tradition. It calculates the sun's apparent ecliptic longitude at noon on your birth date and maps it to one of 72 angels (each governing 5 degrees of the zodiac circle, starting from the vernal equinox). This method provides accuracy for leap years and dates between 1900 and 2100, using astronomical formulas aligned with traditional references, including considerations for historical figures like Jesus (traditional birth December 25 corresponding to Poyel in approximate fixed ranges, but calculated precisely). The year is used to handle leap years correctly, and February 29 is valid only in leap years. Special birth dates (January 5, March 19, May 31, August 12, October 24) are associated with seasonal transitions and elements, allowing choice of any angel and a mission to guard humanity.
+This app determines your guardian angel based on your birth date using Kabbalistic tradition. It calculates the sun's apparent ecliptic longitude at noon on your birth date and maps it to one of 72 angels (each governing 5 degrees of the zodiac circle, starting from the vernal equinox). This method provides accuracy for leap years and dates between 1900 and 2100, using astronomical formulas aligned with traditional references, including considerations for historical figures like Jesus (traditional birth December 25 corresponding to Poyel in approximate fixed ranges, but calculated precisely). The year is used to handle leap years correctly, and February 29 is valid only in leap years. Special birth dates (January 5, March 19, May 31, August 12, October 24) are associated with seasonal transitions, elements, and archangels, allowing choice of any angel and a mission to guard humanity.
 """)
 
 # Input birth date
@@ -169,6 +177,8 @@ if st.button("Find My Guardian Angel"):
             if special_index is not None:
                 element = elements[special_index]
                 transition = transitions[special_index]
-                st.info(f"Your birth date is a special day associated with the {transition} transition and the element {element}. You are a 'Genius of Humanity' with the mission to guard humanity, and can choose any of the 72 angels as your protector. You embody high intelligence, sensitivity, humanitarian appeal, and a deep connection with nature and elemental forces (gnomes for earth, salamanders for fire, undines for water, sylphs for air, and ethereal beings for ether).")
+                archangel = archangels[special_index]
+                symbolism = symbolisms[special_index]
+                st.info(f"Your birth date is a special day associated with the {transition} transition, the element {element}, and the archangel {archangel}. {symbolism} You are a 'Genius of Humanity' with the mission to guard humanity, and can choose any of the 72 angels as your protector. You embody high intelligence, sensitivity, humanitarian appeal, and a deep connection with nature and elemental forces (gnomes for earth, salamanders for fire, undines for water, sylphs for air, and ethereal beings for aether).")
     else:
         st.warning("Please enter your birth date.")
