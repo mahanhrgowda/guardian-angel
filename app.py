@@ -3,7 +3,7 @@ import math
 import calendar
 from datetime import datetime
 
-# List of 72 angels with updated details
+# List of 72 angels + 5 archangels with updated details
 angels = [
     {"number": 1, "name": "Vehuiah", "zodiac": "Aries", "element": "Fire", "attributes": "🌟💪 Vehuiah, known as 'God the Exalter,' symbolizes divine will and profound transformation, guiding individuals toward their destiny by supplying boundless energy during times of need and aiding in new beginnings with unwavering willpower. This angel is a patron of the liberal arts and sciences, elevating one's status and ranking in intellectual pursuits while offering wisdom and guidance for the Great Work—spiritual alchemy and personal evolution. Enthusiastic for science and the arts, Vehuiah empowers the accomplishment of the most difficult tasks, resolving conflicts through insightful strife management and fostering leadership with innovative thinking. Invoked for clarity amid challenges, it supports personal growth, helping navigate obstacles with a visionary approach. Associated with the Sephira Keter (Crown), the element of Fire 🔥, and the Ace of Wands in Tarot (upright), under Mars' rulership and Metatron's oversight. Invocation method: Recite the 3rd verse of Psalm 3—'But thou, O Lord, art a shield for me; my glory, and the lifter up of mine head' (Et tu Domine susceptor meus et gloria mea et exaltans caput meum)—during rituals involving fire for leadership and advancement. Those born under its influence are blessed with resilience, intellectual elevation, and the ability to turn strife into triumph, making Vehuiah a powerful ally for ambitious souls seeking enlightenment and success. Sparks new beginnings and helps individuals overcome challenges. Supports the undertaking of the Great Work; known for wisdom; patron for liberal arts and sciences. Elevates ranking and status.", "psalm": "3:3", "sigil_desc": "Features a six-pointed star with the divine name Vehu repeated three times—twice anti-clockwise around the outside of the star and once in the center, written from right to left. Also a pentagram with the Angel's name Vehuiah formed by a single anti-clockwise ring of letters, including the suffix iah added to the Name of God. Includes a central pentagon space for desires, surrounded by patterns of light and dark texture for Empowered Angel Magick."},
     {"number": 2, "name": "Jeliel", "zodiac": "Aries", "element": "Fire", "attributes": "❤️🕊️ Jeliel, meaning 'God Listening in Secret' or 'Strength,' provides love and wisdom in all forms, spreading harmony in relationships and aiding reconciliation during conflicts. This angel quells popular uprisings and secures victory over unjust attacks, embodying artful diplomacy, political acumen, and a champion's spirit for social justice. With a sprightly, outgoing, optimistic, energetic, and friendly nature, Jeliel ignites passion for meaningful connections, including romantic and sexual pursuits, while fostering emotional balance and inner peace. Invoked for mental clarity during emotional turmoil, it helps maintain grace under pressure and promotes fidelity in partnerships. Associated with the Sephira Keter, Fire element 🔥, and Ace of Wands Reversed in Tarot, under Mars' rulership and Metatron's guidance. Invocation method: Use the 19th verse of Psalm 22—'But be thou not far from me, O Lord: O my strength, haste thee to help me' (Tu autem Domine ne elongaveris auxilium tuum a me ad defensionem meam conspice)—in peace-making rituals. Individuals under Jeliel's influence experience profound calm, resilience, and success in social endeavors, making it ideal for those seeking harmonious relationships and triumphant resolutions. Promotes love, loyalty, and fidelity in relationships. Invoke to embody artful diplomacy and political acumen; facilitates victory; champion of social justice; sprightly, outgoing, optimistic, energetic, and friendly.", "psalm": "22:19", "sigil_desc": "Features a six-pointed star with the divine name Yeli repeated three times—twice anti-clockwise around the outside of the star and once in the center, written from right to left. Also a pentagram with the Angel's name Jeliel formed by a single anti-clockwise ring of letters, including the suffix el added to the Name of God. Includes a central pentagon space for desires, surrounded by patterns of light and dark texture for Empowered Angel Magick."},
@@ -76,21 +76,26 @@ angels = [
     {"number": 69, "name": "Rochel", "zodiac": "Pisces", "element": "Water", "attributes": "⚖️🏆 Rochel gives what is deserved, symbolizes justice and equity by restoring lost goods and aiding fame. This angel influences renown. Invoked for justice. Associated with rights. Invocation: Equity prayers. Born under Rochel are just victors. Helps find lost objects and promotes justice. Restitution. Finds lost objects. Influences renown through talent.", "psalm": "16:5", "sigil_desc": "Features a six-pointed star with the divine name Roch repeated three times—twice anti-clockwise around the outside of the star and once in the center, written from right to left. Also a pentagram with the Angel's name Rochel formed by a single anti-clockwise ring of letters, including the suffix el added to the Name of God. Includes a central pentagon space for desires, surrounded by patterns of light and dark texture for Empowered Angel Magick."},
     {"number": 70, "name": "Yabamiah", "zodiac": "Pisces", "element": "Water", "attributes": "🌟🩹 Jabamiah delivers healing energy, regenerates and restores harmony by governing phenomena and aiding philosophy. This angel influences creation. Invoked for healing. Associated with alchemy. Invocation: Regeneration rituals. Ideal for regenerators. Facilitates creation, regeneration, and alchemical transformation. It inspires philosophical understanding, harmony with nature, and the ability to manifest ideas into reality.", "psalm": "Genesis 1:1", "sigil_desc": "a phoenix rising from water; Features a six-pointed star with the divine name Yabam repeated three times—twice anti-clockwise around the outside of the star and once in the center, written from right to left. Also a pentagram with the Angel's name Yabamiah formed by a single anti-clockwise ring of letters, including the suffix iah added to the Name of God. Includes a central pentagon space for desires, surrounded by patterns of light and dark texture for Empowered Angel Magick."},
     {"number": 71, "name": "Haiaiel", "zodiac": "Pisces", "element": "Water", "attributes": "🛡️⚖️ Haiaiel provides divine protection, helps make just decisions by confounding traitors and delivering the oppressed. This angel influences courage. Invoked for protection. Associated with weapons. Invocation: Protection psalms. Born under Haiaiel are protected deciders. Provides courage and protection against evil. Discernment. Victory over traitors. Protects against conspiracies.", "psalm": "109:30", "sigil_desc": "Features a six-pointed star with the divine name Haiai repeated three times—twice anti-clockwise around the outside of the star and once in the center, written from right to left. Also a pentagram with the Angel's name Haiaiel formed by a single anti-clockwise ring of letters, including the suffix el added to the Name of God. Includes a central pentagon space for desires, surrounded by patterns of light and dark texture for Empowered Angel Magick."},
-    {"number": 72, "name": "Mumiah", "zodiac": "Pisces", "element": "Water", "attributes": "🔄⚡ Mumiah helps complete tasks, gives energy for new beginnings, revitalizes by bringing success to experiments and aiding medicine. This angel influences chemistry. Invoked for completion. Associated with disclosure. Invocation: Completion rituals. Ideal for finishers. Brings completion and success in endeavors. Brings undertakings to successful conclusion. Longevity and success in medicine.", "psalm": "116:7", "sigil_desc": "Features a six-pointed star with the divine name Mumi repeated three times—twice anti-clockwise around the outside of the star and once in the center, written from right to left. Also a pentagram with the Angel's name Mumiah formed by a single anti-clockwise ring of letters, including the suffix iah added to the Name of God. Includes a central pentagon space for desires, surrounded by patterns of light and dark texture for Empowered Angel Magick."}
+    {"number": 72, "name": "Mumiah", "zodiac": "Pisces", "element": "Water", "attributes": "🔄⚡ Mumiah helps complete tasks, gives energy for new beginnings, revitalizes by bringing success to experiments and aiding medicine. This angel influences chemistry. Invoked for completion. Associated with disclosure. Invocation: Completion rituals. Ideal for finishers. Brings completion and success in endeavors. Brings undertakings to successful conclusion. Longevity and success in medicine.", "psalm": "116:7", "sigil_desc": "Features a six-pointed star with the divine name Mumi repeated three times—twice anti-clockwise around the outside of the star and once in the center, written from right to left. Also a pentagram with the Angel's name Mumiah formed by a single anti-clockwise ring of letters, including the suffix iah added to the Name of God. Includes a central pentagon space for desires, surrounded by patterns of light and dark texture for Empowered Angel Magick."},
+    {"number": 73, "name": "Gabriel", "zodiac": "Transitional - Water signs (Cancer, Scorpio, Pisces)", "element": "Water", "attributes": "Encourages intuition, flexibility, and freedom from fears. Tied to the bladder and kidney meridians; brings fertility, wisdom, and spiritual information. Imbalance may result in fear control. Leader angel for Water element angels.", "psalm": "91:11", "sigil_desc": "Often depicted with a lily or moon, representing intuition and flexibility; a complex symbol with Hebrew letters for invocation of divinity and intuition."},
+    {"number": 74, "name": "Nathaniel", "zodiac": "Transitional - Aether/Wood related signs", "element": "Aether (Wood)", "attributes": "Represents new beginnings, growth, and higher vibrations. Tied to the gall-bladder and liver meridians; aids in expanding consciousness and understanding limitless potential. Imbalance may cause complaining. Leader angel for Aether element angels.", "psalm": "145:1-2", "sigil_desc": "Depicted with symbols of growth like a tree or rising sun, representing new beginnings and fire energy."},
+    {"number": 75, "name": "Michael", "zodiac": "Transitional - Fire signs (Aries, Leo, Sagittarius)", "element": "Fire", "attributes": "Inspires divine love, heart-opening, and overcoming depression. Tied to the heart and small intestine meridians; promotes spreading light and recognizing soul duality. Imbalance may cause depression. Leader angel for Fire element angels.", "psalm": "91:11", "sigil_desc": "Composed of seven distinct parts in a circle with a cross, Hebrew letters, often including a sword and shield for protection and strength."},
+    {"number": 76, "name": "Uriel", "zodiac": "Transitional - Earth signs (Taurus, Virgo, Capricorn)", "element": "Earth", "attributes": "Promotes balance, peace, and guidance from doubt. Tied to the stomach and spleen meridians; radiates light to show life's path and encourage serenity. Imbalance may cause anxiety. Leader angel for Earth element angels.", "psalm": "91:11", "sigil_desc": "Featuring a lantern or mountain, symbolizing guidance, wisdom, enlightenment, and protection; green and gold circular seal with symbols."},
+    {"number": 77, "name": "Raphael", "zodiac": "Transitional - Air signs (Gemini, Libra, Aquarius)", "element": "Air (Metal)", "attributes": "Focuses on healing, wisdom, and interconnectedness. Tied to the lung and large intestine meridians; assists in studies, music, medicine, and repairing disharmony. Imbalance may lead to downfall. Leader angel for Air element angels.", "psalm": "29:1", "sigil_desc": "Featuring healing symbols like a staff with serpent or wings, for knowledge, wisdom, healing, and protective powers."}
 ]
 
-# Special days, elements, transitions, archangels, and symbolism
+# Special days and corresponding archangel indices (73-77)
 special_days = [(1, 5), (3, 19), (5, 31), (8, 12), (10, 24)]  # Jan 5, Mar 19, May 31, Aug 12, Oct 24
-elements = ["Earth", "Fire", "Water", "Aether (Wood)", "Air (Metal)"]  
-transitions = ["spring", "summer", "monsoon", "autumn", "winter"]
-archangels = ["Uriel", "Michael", "Gabriel", "Nathaniel", "Raphael"]
-symbolisms = [
-    "Promotes balance, peace, and guidance from doubt. Tied to the stomach and spleen meridians; radiates light to show life's path and encourage serenity. Imbalance may cause anxiety.",
-    "Inspires divine love, heart-opening, and overcoming depression. Tied to the heart and small intestine meridians; promotes spreading light and recognizing soul duality. Imbalance may cause depression.",
-    "Encourages intuition, flexibility, and freedom from fears. Tied to the bladder and kidney meridians; brings fertility, wisdom, and spiritual information. Imbalance may result in fear control.",
-    "Represents new beginnings, growth, and higher vibrations. Tied to the gall-bladder and liver meridians; aids in expanding consciousness and understanding limitless potential. Imbalance may cause complaining.",
-    "Focuses on healing, wisdom, and interconnectedness. Tied to the lung and large intestine meridians; assists in studies, music, medicine, and repairing disharmony. Imbalance may lead to downfall."
-]
+archangel_indices = [76, 75, 73, 74, 77]  # Uriel(76), Michael(75), Gabriel(73), Nathaniel(74), Raphael(77)
+
+# Element to archangel mapping for leader
+element_to_archangel = {
+    "Earth": angels[75],  # Uriel 76, but indices start from 0, so angels[75] is Uriel (number 76)
+    "Fire": angels[74],  # Michael 75, angels[74]
+    "Water": angels[72],  # Gabriel 73, angels[72]
+    "Aether (Wood)": angels[73],  # Nathaniel 74, angels[73]
+    "Air (Metal)": angels[76]  # Raphael 77, angels[76]
+}
 
 def get_zodiac_sign(lon):
     lon = lon % 360
@@ -113,11 +118,17 @@ def get_zodiac_sign(lon):
             return sign
     return "Pisces"
 
+def is_after_special_date(birth_date, special_day):
+    special_month, special_day_num = special_day
+    if birth_date.month > special_month or (birth_date.month == special_month and birth_date.day > special_day_num):
+        return True
+    return False
+
 st.title("Guardian Angel Calculator")
 
 st.markdown("""
 ### How it works
-This app determines your guardian angel based on your birth date using Kabbalistic tradition. It calculates the sun's apparent ecliptic longitude at noon on your birth date and maps it to one of 72 angels (each governing 5 degrees of the zodiac circle, starting from the vernal equinox). This method provides accuracy for leap years and dates between 1900 and 2100, using astronomical formulas aligned with traditional references, including considerations for historical figures like Jesus (traditional birth December 25 corresponding to Poyel in approximate fixed ranges, but calculated precisely). The year is used to handle leap years correctly, and February 29 is valid only in leap years. Special birth dates (January 5, March 19, May 31, August 12, October 24) are associated with seasonal transitions, elements, and archangels, allowing choice of any angel and a mission to guard humanity.
+This app determines your guardian angel based on your birth date using Kabbalistic tradition. It calculates the sun's apparent ecliptic longitude at noon on your birth date and maps it to one of 72 angels (each governing 5 degrees of the zodiac circle, starting from the vernal equinox). This method provides accuracy for leap years and dates between 1900 and 2100, using astronomical formulas aligned with traditional references, including considerations for historical figures like Jesus (traditional birth December 25 corresponding to Mebahiah 🧠🕊️( Mebahiah aids intellectual lucidity and moral integrity by contemplating divine ideas and inspiring religion. This angel influences morality. Invoked for lucidity. Associated with consolation. Invocation: Moral rituals. Born under Mebahiah are moral thinkers. Enhances intellectual clarity and moral integrity. Lucidity and consolation. Inspires religious sentiment. Virtuous living). in approximate fixed ranges, but calculated precisely). The year is used to handle leap years correctly, and February 29 is valid only in leap years. Special birth dates (January 5, March 19, May 31, August 12, October 24) fill the calendar gaps for accuracy (360/72 angels cover 360 days, these 5 extra days link to archangels), allowing choice of any angel and a mission to guard humanity. For dates after a special date, the corresponding archangel is the leader for angels of that element and zodiac.
 """)
 
 # Input birth date
@@ -162,23 +173,48 @@ if st.button("Find My Guardian Angel"):
             # Apparent ecliptic longitude lambda in degrees
             lambda_deg = (l + 1.915 * math.sin(g_rad) + 0.020 * math.sin(2 * g_rad)) % 360
 
-            # Calculate index (0 to 71)
+            # Calculate index (0 to 71 for regular angels)
             index = int(lambda_deg // 5)
 
-            angel = angels[index]
-            zodiac = get_zodiac_sign(lambda_deg)
-            st.success(f"Your Guardian Angel is **{angel['name']}** (Number {angel['number']}, Zodiac: {zodiac}, Element: {angel['element']}) (based on ecliptic longitude {lambda_deg:.2f}°)")
+            # Check if special date
+            special_index = next((i for i, (sm, sd) in enumerate(special_days) if month == sm and day == sd), None)
+            if special_index is not None:
+                archangel_index = archangel_indices[special_index] - 1  # adjust for 0-based
+                angel = angels[archangel_index]
+                zodiac = angel['zodiac']
+                st.success(f"Your Guardian Archangel is **{angel['name']}** (Number {angel['number']}, Zodiac: {zodiac}, Element: {angel['element']}) (special gap date)")
+            else:
+                angel = angels[index]
+                zodiac = get_zodiac_sign(lambda_deg)
+                st.success(f"Your Guardian Angel is **{angel['name']}** (Number {angel['number']}, Zodiac: {zodiac}, Element: {angel['element']}) (based on ecliptic longitude {lambda_deg:.2f}°)")
+            
             st.write(angel['attributes'])
             st.write(f"Psalm: {angel['psalm']}")
             st.write(f"Sigil Description: {angel['sigil_desc']}")
 
-            # Check for special days
-            special_index = next((i for i, (sm, sd) in enumerate(special_days) if month == sm and day == sd), None)
-            if special_index is not None:
-                element = elements[special_index]
-                transition = transitions[special_index]
-                archangel = archangels[special_index]
-                symbolism = symbolisms[special_index]
-                st.info(f"Your birth date is a special day associated with the {transition} transition, the element {element}, and the archangel {archangel}. {symbolism} You are a 'Genius of Humanity' with the mission to guard humanity, and can choose any of the 72 angels as your protector. You embody high intelligence, sensitivity, humanitarian appeal, and a deep connection with nature and elemental forces (gnomes for earth, salamanders for fire, undines for water, sylphs for air, and ethereal beings for aether).")
+            # Find if after any special date and show leader archangel
+            leader_archangel = None
+            for i, special_day in enumerate(special_days):
+                if is_after_special_date(birth_date, special_day):
+                    leader_index = archangel_indices[i] - 1
+                    leader_archangel = angels[leader_index]
+                    break  # Use the first matching 'after' period
+
+            if leader_archangel:
+                st.info(f"Overseeing Leader Archangel for this period (after special date): **{leader_archangel['name']}** (Number {leader_archangel['number']}, Element: {leader_archangel['element']}) - Leader for {leader_archangel['element']} element angels in related zodiac signs.")
+                st.write(leader_archangel['attributes'])
+                st.write(f"Psalm: {leader_archangel['psalm']}")
+                st.write(f"Sigil Description: {leader_archangel['sigil_desc']}")
+            elif 'Leader angel' in angel['attributes']:
+                st.info(f"This is an Archangel and leader for its element and related zodiac signs.")
+
+            # If normal angel, show its leader based on element
+            if special_index is None:
+                leader = element_to_archangel.get(angel['element'])
+                if leader:
+                    st.info(f"Leader Archangel for {angel['element']} element angels: **{leader['name']}** (Number {leader['number']})")
+                    st.write(leader['attributes'])
+                    st.write(f"Psalm: {leader['psalm']}")
+                    st.write(f"Sigil Description: {leader['sigil_desc']}")
     else:
         st.warning("Please enter your birth date.")
